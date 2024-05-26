@@ -1,9 +1,9 @@
 
 body {
   
-    font-family: 'Poppins';
+    font-family: 'Roboto', sans-serif;
 font-size: 14px;
-font-weight: 600;
+
 line-height: 21px;
 text-align: center;   
 text-decoration: none; 
@@ -14,20 +14,34 @@ h2 {
     padding-bottom: 70px;
 }
 
+h3 {
+    font-family: 'Roboto', sans-serif;
+font-size: 20px;
+font-weight:100;
+line-height: 23.44px;
+text-align: center;
+
+}
 .container {
    
     max-width: 360px;
     margin: 46px auto;
-    background-color: rgb(250, 247, 249);
+    
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 
 }
 
+.button {
+    background: #549F3B;
+    border-radius: 2px;
+
+}
+
 input[type="text"], input[type="email"], input[type="password"] {
 
-    font-family: 'Poppins';
+    font-family: 'Roboto', sans-serif;
 width: 312px;
     padding: 10px;
     margin: 10px 0;
@@ -43,22 +57,21 @@ input[type="submit"], button {
    
  width: 310px;
  padding: 10px;
-height: 72px;
+height: 52px;
 margin: 30px 5px 30px;
 top: 800px;
 gap: 40px;
 opacity: 0px;
-font-family: 'Poppins';
+font-family: 'Roboto', sans-serif;
 font-size: 1.2rem;
 font-weight: 600;
 text-decoration: none;
-    background-color: #A7A3EA;
+    background-color: #549F3B;
     color: white;
     border: none;
-    border-radius: 0;
+    border-radius: 8px;
     cursor: pointer;
 }
-
 
 
 @media screen and (max-width: 480px) {

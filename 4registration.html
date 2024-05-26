@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="project.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<title>Registration Form</title>
+
+</head>
+<body>
+<div class="container">
+    <h2>Welcome Onboard!</h2>
+    <form action="#" method="post">
+
+        
+        <input type="text" id="username" name="username" placeholder="Enter your username">
+
+        
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+
+       
+        <input type="password" id="password1" name="password" placeholder="Enter password">
+        
+        <input type="password" id="password2" name="password" placeholder="Confirm password">
+
+        <button type="button" onclick="registerUser()">Register</button>
+
+
+
+    </form>
+
+    <script>
+
+   
+
+    function registerUser() {
+        //validate password
+        const enterpassword = document.getElementById("password1").value;
+        const confirmpassword= document.getElementById("password2").value;
+        if (enterpassword==confirmpassword)
+        {
+            // save user to local storage
+            storeUser();
+            //goto next page
+            location.href='login.html';
+        }
+        else {
+            alert("confirm password doesnt match");
+        }  
+    function storeUser() {
+        // get values from input fields
+        const username= document.getElementById("username").value;
+        const email= document.getElementById("email").value;
+        const confirmpassword= document.getElementById("password2").value;
+        //save to local storage
+        localStorage.setItem('username',username);
+        localStorage.setItem('email',email);
+        localStorage.setItem('password',confirmpassword);
+
+
+    }   
+
+        console.log(username);
+    }
+    
+
+    
+    </script>
+
+    <p>Already have an account? <a href="login.html">Sign in</a></p>
+    
+</div>
+</body>
+</html>

@@ -15,7 +15,7 @@
     <div class="container">
         <h2>Welcome Back!</h2>
 
-        <img src="undraw_mobile_user_re_xta4 1.png" alt="figure1" />
+        <img src="Google.png" alt="figure1" />
         
 
         <form action="#" method="post">
@@ -25,14 +25,39 @@
             
             <input type="password" id="password" name="password" placeholder="Enter password">
 
-            <a href ="#"><p>Forget password</p></a>
+            <a href ="forgotpass.html"><p>Forgot password?</p></a>
 
-            <input type="submit" value="Register">
+            <button type="button" onclick="validateLogin()">Log In</button>
+
 
         </form>
-        <p>Don't have an account? <a href="#">Sign Up</a></p>
+        <script>
+            //create function when u click login
+            //get elements from input field
+            //get values from local storage-getitem
+            //check if its match-if it does goto next page else alert message  
+
+            //create function when u click login
+            function validateLogin() {
+            // Get the username and password values from the form inputs
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Basic validation criteria
+            if (username.length >= 3 && password.length >= 6) {
+                // If validation passes, redirect to addprofpic.html
+               location.href = "addProfPic.html";
+            } else {
+                // If validation fails, show an alert
+                alert("Invalid username or password. Username must be at least 3 characters and password must be at least 6 characters.");
+            }
+        }
+ console.log();
+
+
+        </script>
+        <p>Don't have an account? <a href="4registration.html">Sign Up</a></p>
         
     </div>
     </body>
     </html>
-    
